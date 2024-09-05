@@ -80,7 +80,7 @@ def signin_with_token(token, cookies):
                 signin_result = "签到成功"
                 print(f"{signin_result}，信息：{sign_message}")
 
-                if pushPlus_set == 1:
+                if pushPlus_set == 1 or phsuPlus_set == 2:
                     send_push_notification(signin_result, sign_message)
                 elif pushPlus_set == 0:
                     print("推送未开启，请检查推送设置")
